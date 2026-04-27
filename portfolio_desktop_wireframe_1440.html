@@ -1,0 +1,397 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+.wf{width:100%;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;font-family:var(--font-sans);}
+.screen{width:100%;background:var(--color-background-primary);}
+.ph{background:var(--color-border-tertiary);border-radius:4px;}
+.ph-md{background:var(--color-border-secondary);border-radius:4px;}
+.ph-dk{background:var(--color-text-secondary);border-radius:4px;opacity:.25;}
+.ph-acc{background:#B5D4F4;border-radius:4px;}
+.lbl{font-size:11px;color:var(--color-text-secondary);}
+.txt{color:var(--color-text-secondary);font-size:11px;line-height:1.6;}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 72px;height:64px;border-bottom:0.5px solid var(--color-border-tertiary);}
+.nav-logo{font-size:16px;font-weight:500;color:var(--color-text-primary);}
+.nav-links{display:flex;gap:32px;}
+.nav-link{font-size:13px;color:var(--color-text-secondary);}
+.nav-cta{padding:8px 20px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);font-size:13px;font-weight:500;color:#185FA5;}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:480px;border-bottom:0.5px solid var(--color-border-tertiary);}
+.hero-left{padding:72px 64px 72px 72px;display:flex;flex-direction:column;justify-content:center;}
+.hero-right{background:var(--color-background-secondary);display:flex;align-items:center;justify-content:center;padding:48px;}
+.hero-tag{display:inline-flex;align-items:center;background:#E6F1FB;color:#185FA5;font-size:11px;font-weight:500;padding:4px 14px;border-radius:20px;margin-bottom:20px;width:fit-content;}
+.hero-h1{margin-bottom:16px;}
+.hero-sub{font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:28px;max-width:460px;}
+.hero-btns{display:flex;gap:12px;}
+.btn-p{padding:12px 28px;background:#185FA5;color:#fff;border-radius:var(--border-radius-md);font-size:13px;font-weight:500;}
+.btn-s{padding:12px 24px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);font-size:13px;color:var(--color-text-secondary);}
+.hero-img{width:100%;max-width:340px;aspect-ratio:1/1.1;background:var(--color-border-tertiary);border-radius:var(--border-radius-lg);}
+.hero-dots{display:flex;gap:8px;margin-top:16px;justify-content:center;}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--color-border-secondary);}
+.hero-dot.a{background:#185FA5;}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid var(--color-border-tertiary);}
+.about-left{padding:72px;display:flex;flex-direction:column;gap:20px;}
+.about-photo{width:100%;height:320px;background:var(--color-border-tertiary);border-radius:var(--border-radius-lg);}
+.about-right{padding:72px 72px 72px 48px;display:flex;flex-direction:column;justify-content:center;}
+.sec-eyebrow{font-size:11px;font-weight:500;color:#185FA5;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
+.sec-title{margin-bottom:12px;}
+.body-text{font-size:13px;color:var(--color-text-secondary);line-height:1.8;margin-bottom:16px;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;}
+.badge{padding:5px 14px;border-radius:20px;font-size:11px;font-weight:500;}
+.badge-b{background:#E6F1FB;color:#185FA5;}
+.badge-g{background:#EAF3DE;color:#3B6D11;}
+.badge-a{background:#FAEEDA;color:#854F0B;}
+.badge-c{background:#FAECE7;color:#993C1D;}
+
+/* SKILLS */
+.skills{padding:80px 72px;background:var(--color-background-secondary);border-bottom:0.5px solid var(--color-border-tertiary);}
+.skills-header{text-align:center;margin-bottom:48px;}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.skill-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:28px 24px;}
+.skill-icon{width:44px;height:44px;border-radius:var(--border-radius-md);margin-bottom:16px;}
+.skill-title{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;}
+.skill-sub{font-size:12px;color:var(--color-text-secondary);margin-bottom:16px;line-height:1.6;}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:7px;}
+.bar-label{font-size:11px;color:var(--color-text-secondary);width:60px;flex-shrink:0;}
+.bar-track{flex:1;height:5px;background:var(--color-border-tertiary);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;background:var(--color-border-secondary);}
+
+/* PROJECTS */
+.projects{padding:80px 72px;border-bottom:0.5px solid var(--color-border-tertiary);}
+.projects-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;}
+.filters{display:flex;gap:8px;margin-bottom:36px;}
+.filter{padding:6px 18px;border-radius:20px;font-size:12px;border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);}
+.filter.active{background:var(--color-border-secondary);color:var(--color-text-primary);}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.proj-card{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;}
+.proj-thumb{height:180px;}
+.proj-info{padding:20px;}
+.proj-tag{display:inline-block;font-size:11px;font-weight:500;padding:3px 12px;border-radius:20px;background:#E6F1FB;color:#185FA5;margin-bottom:10px;}
+.proj-title{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;}
+.proj-desc{font-size:12px;color:var(--color-text-secondary);line-height:1.6;margin-bottom:14px;}
+.proj-link{font-size:12px;font-weight:500;color:#185FA5;}
+.proj-more{text-align:center;margin-top:40px;}
+.proj-more-btn{display:inline-block;padding:12px 36px;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);font-size:13px;color:var(--color-text-secondary);}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid var(--color-border-tertiary);}
+.contact-left{padding:80px 64px 80px 72px;background:var(--color-background-secondary);}
+.contact-right{padding:80px 72px 80px 64px;}
+.contact-info-row{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.contact-icon{width:36px;height:36px;border-radius:var(--border-radius-md);background:var(--color-border-tertiary);flex-shrink:0;}
+.form-field{margin-bottom:16px;}
+.form-label{font-size:12px;color:var(--color-text-secondary);margin-bottom:6px;display:block;}
+.form-input{width:100%;height:42px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:0 14px;font-size:13px;color:var(--color-text-secondary);}
+.form-textarea{width:100%;height:110px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:12px 14px;font-size:13px;color:var(--color-text-secondary);resize:none;}
+.send-btn{width:100%;height:48px;background:#185FA5;color:#fff;border-radius:var(--border-radius-md);font-size:13px;font-weight:500;margin-top:4px;display:flex;align-items:center;justify-content:center;}
+.social-row{display:flex;gap:10px;margin-top:28px;}
+.social-btn{width:38px;height:38px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;color:var(--color-text-secondary);}
+
+/* FOOTER */
+.footer{padding:28px 72px;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid var(--color-border-tertiary);}
+.foot-logo{font-size:14px;font-weight:500;color:var(--color-text-primary);}
+.foot-copy{font-size:12px;color:var(--color-text-secondary);}
+.foot-links{display:flex;gap:24px;}
+.foot-link{font-size:12px;color:var(--color-text-secondary);}
+
+/* LINE HELPERS */
+.line{height:10px;border-radius:3px;margin-bottom:8px;}
+.line-lg{height:20px;border-radius:4px;margin-bottom:10px;}
+
+/* SCALE NOTICE */
+.scale-bar{background:#E6F1FB;border-bottom:0.5px solid #B5D4F4;padding:6px 16px;display:flex;align-items:center;justify-content:space-between;}
+.scale-txt{font-size:10px;font-weight:500;color:#185FA5;}
+</style>
+
+<div class="wf">
+  <div class="scale-bar">
+    <span class="scale-txt">Wireframe Desktop — 1440px × 4800px (escala reduzida para visualização)</span>
+    <span class="scale-txt">Portfólio One Page</span>
+  </div>
+  <div class="screen">
+
+    <!-- NAV -->
+    <div class="nav">
+      <div class="nav-logo">Joice Soato</div>
+      <div class="nav-links">
+        <span class="nav-link">Sobre mim</span>
+        <span class="nav-link">Habilidades</span>
+        <span class="nav-link">Projetos</span>
+        <span class="nav-link">Contato</span>
+      </div>
+      <div class="nav-cta">Fale comigo</div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-left">
+        <div class="hero-tag">Design · Desenvolvimento · E-commerce</div>
+        <div class="hero-h1">
+          <div class="line line-lg ph-dk" style="width:85%;height:28px;margin-bottom:10px;"></div>
+          <div class="line line-lg ph-dk" style="width:70%;height:28px;margin-bottom:10px;"></div>
+          <div class="line line-lg ph-acc" style="width:65%;height:28px;"></div>
+        </div>
+        <p class="hero-sub">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Profissional multidisciplinar entregando resultados.
+        </p>
+        <div class="hero-btns">
+          <div class="btn-p">Ver projetos</div>
+          <div class="btn-s">Baixar CV</div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div style="display:flex;flex-direction:column;align-items:center;width:100%;">
+          <div class="hero-img"></div>
+          <div class="hero-dots" style="margin-top:16px;">
+            <div class="hero-dot a"></div>
+            <div class="hero-dot"></div>
+            <div class="hero-dot"></div>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:16px;width:100%;justify-content:center;">
+            <div style="text-align:center;">
+              <div class="line ph-dk" style="width:48px;height:16px;margin:0 auto 4px;"></div>
+              <div class="line ph" style="width:56px;height:9px;margin:0 auto;"></div>
+            </div>
+            <div style="text-align:center;">
+              <div class="line ph-dk" style="width:48px;height:16px;margin:0 auto 4px;"></div>
+              <div class="line ph" style="width:56px;height:9px;margin:0 auto;"></div>
+            </div>
+            <div style="text-align:center;">
+              <div class="line ph-dk" style="width:48px;height:16px;margin:0 auto 4px;"></div>
+              <div class="line ph" style="width:56px;height:9px;margin:0 auto;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about">
+      <div class="about-left">
+        <div class="about-photo"></div>
+        <div style="display:flex;gap:10px;">
+          <div class="line ph" style="width:80px;height:9px;margin-bottom:0;"></div>
+          <div class="line ph" style="width:64px;height:9px;margin-bottom:0;"></div>
+          <div class="line ph" style="width:72px;height:9px;margin-bottom:0;"></div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="sec-eyebrow">Sobre mim</div>
+        <div class="sec-title">
+          <div class="line ph-dk" style="width:55%;height:24px;margin-bottom:8px;"></div>
+          <div class="line ph-acc" style="width:40%;height:24px;"></div>
+        </div>
+        <p class="body-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+        <p class="body-text">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+        <div class="badges">
+          <span class="badge badge-b">Design UX/UI</span>
+          <span class="badge badge-g">Front-end</span>
+          <span class="badge badge-a">E-commerce</span>
+          <span class="badge badge-c">Marketing Digital</span>
+          <span class="badge badge-b">Implantação</span>
+          <span class="badge badge-g">Branding</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="skills">
+      <div class="skills-header">
+        <div class="sec-eyebrow" style="margin-bottom:6px;">Habilidades & Competências</div>
+        <div class="line ph-dk" style="width:320px;height:22px;margin:0 auto 8px;"></div>
+        <div class="line ph" style="width:480px;height:10px;margin:0 auto;"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#B5D4F4;"></div>
+          <div class="skill-title">Design UX/UI</div>
+          <div class="skill-sub">Figma, Wireframing, Prototipação, Design System</div>
+          <div class="bar-row"><span class="bar-label">Figma</span><div class="bar-track"><div class="bar-fill" style="width:94%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Prototipação</span><div class="bar-track"><div class="bar-fill" style="width:88%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Pesquisa</span><div class="bar-track"><div class="bar-fill" style="width:76%;"></div></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#C0DD97;"></div>
+          <div class="skill-title">Desenvolvimento</div>
+          <div class="skill-sub">HTML, CSS, JavaScript, React, integrações</div>
+          <div class="bar-row"><span class="bar-label">HTML/CSS</span><div class="bar-track"><div class="bar-fill" style="width:92%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">JavaScript</span><div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">React</span><div class="bar-track"><div class="bar-fill" style="width:70%;"></div></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#F5C4B3;"></div>
+          <div class="skill-title">Marketing Digital</div>
+          <div class="skill-sub">SEO, campanhas, Google Ads, estratégias de marca</div>
+          <div class="bar-row"><span class="bar-label">SEO</span><div class="bar-track"><div class="bar-fill" style="width:86%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Google Ads</span><div class="bar-track"><div class="bar-fill" style="width:80%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Analytics</span><div class="bar-track"><div class="bar-fill" style="width:78%;"></div></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon" style="background:#FAC775;"></div>
+          <div class="skill-title">E-commerce</div>
+          <div class="skill-sub">Shopify, WooCommerce, implantação, conversão</div>
+          <div class="bar-row"><span class="bar-label">Shopify</span><div class="bar-track"><div class="bar-fill" style="width:90%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">WooCommerce</span><div class="bar-track"><div class="bar-fill" style="width:84%;"></div></div></div>
+          <div class="bar-row"><span class="bar-label">Conversão</span><div class="bar-track"><div class="bar-fill" style="width:82%;"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="projects">
+      <div class="projects-header">
+        <div>
+          <div class="sec-eyebrow">Projetos & Cases</div>
+          <div class="line ph-dk" style="width:280px;height:22px;margin-top:4px;margin-bottom:0;"></div>
+        </div>
+        <div style="font-size:12px;color:#185FA5;font-weight:500;">Ver todos os projetos →</div>
+      </div>
+      <div class="filters">
+        <span class="filter active">Todos</span>
+        <span class="filter">Design</span>
+        <span class="filter">Desenvolvimento</span>
+        <span class="filter">E-commerce</span>
+        <span class="filter">Marketing</span>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-thumb" style="background:#B5D4F4;"></div>
+          <div class="proj-info">
+            <span class="proj-tag">E-commerce</span>
+            <div class="proj-title">Lorem Ipsum Project — Loja Virtual</div>
+            <div class="proj-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</div>
+            <span class="proj-link">Ver case →</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-thumb" style="background:#C0DD97;"></div>
+          <div class="proj-info">
+            <span class="proj-tag" style="background:#EAF3DE;color:#3B6D11;">Design</span>
+            <div class="proj-title">Design System para Startup B2B</div>
+            <div class="proj-desc">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</div>
+            <span class="proj-link">Ver case →</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-thumb" style="background:#F5C4B3;"></div>
+          <div class="proj-info">
+            <span class="proj-tag" style="background:#FAECE7;color:#993C1D;">Marketing</span>
+            <div class="proj-title">Campanha de Lançamento — Produto X</div>
+            <div class="proj-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</div>
+            <span class="proj-link">Ver case →</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-thumb" style="background:#EEEDFE;"></div>
+          <div class="proj-info">
+            <span class="proj-tag" style="background:#EEEDFE;color:#534AB7;">Desenvolvimento</span>
+            <div class="proj-title">Plataforma SaaS — Dashboard Admin</div>
+            <div class="proj-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</div>
+            <span class="proj-link">Ver case →</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-thumb" style="background:#FAC775;"></div>
+          <div class="proj-info">
+            <span class="proj-tag" style="background:#FAEEDA;color:#854F0B;">E-commerce</span>
+            <div class="proj-title">Implantação Shopify — Moda Premium</div>
+            <div class="proj-desc">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</div>
+            <span class="proj-link">Ver case →</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-thumb" style="background:#9FE1CB;"></div>
+          <div class="proj-info">
+            <span class="proj-tag" style="background:#E1F5EE;color:#0F6E56;">Design</span>
+            <div class="proj-title">Redesign de Marca — Identidade Visual</div>
+            <div class="proj-desc">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</div>
+            <span class="proj-link">Ver case →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact">
+      <div class="contact-left">
+        <div class="sec-eyebrow">Contato</div>
+        <div class="line ph-dk" style="width:65%;height:22px;margin-bottom:8px;margin-top:4px;"></div>
+        <div class="line ph-acc" style="width:50%;height:22px;margin-bottom:24px;"></div>
+        <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px;">
+          <div class="contact-info-row">
+            <div class="contact-icon"></div>
+            <div>
+              <div class="line ph-dk" style="width:80px;height:10px;margin-bottom:5px;"></div>
+              <div class="line ph" style="width:140px;height:9px;margin-bottom:0;"></div>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <div class="contact-icon"></div>
+            <div>
+              <div class="line ph-dk" style="width:64px;height:10px;margin-bottom:5px;"></div>
+              <div class="line ph" style="width:160px;height:9px;margin-bottom:0;"></div>
+            </div>
+          </div>
+          <div class="contact-info-row">
+            <div class="contact-icon"></div>
+            <div>
+              <div class="line ph-dk" style="width:88px;height:10px;margin-bottom:5px;"></div>
+              <div class="line ph" style="width:120px;height:9px;margin-bottom:0;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="social-row">
+          <div class="social-btn">in</div>
+          <div class="social-btn">GH</div>
+          <div class="social-btn">be</div>
+          <div class="social-btn">ig</div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="sec-eyebrow" style="margin-bottom:6px;">Envie uma mensagem</div>
+        <div class="line ph-dk" style="width:55%;height:20px;margin-bottom:28px;margin-top:4px;"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-field">
+            <label class="form-label">Nome</label>
+            <div class="form-input" style="display:flex;align-items:center;"><span style="color:var(--color-text-secondary);opacity:.5;">Lorem Ipsum</span></div>
+          </div>
+          <div class="form-field">
+            <label class="form-label">E-mail</label>
+            <div class="form-input" style="display:flex;align-items:center;"><span style="color:var(--color-text-secondary);opacity:.5;">lorem@ipsum.com</span></div>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Assunto</label>
+          <div class="form-input" style="display:flex;align-items:center;"><span style="color:var(--color-text-secondary);opacity:.5;">Lorem ipsum dolor sit amet...</span></div>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Mensagem</label>
+          <div class="form-textarea"><span style="color:var(--color-text-secondary);opacity:.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor...</span></div>
+        </div>
+        <div class="send-btn">Enviar mensagem</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="foot-logo">Joice Soato</div>
+      <div class="foot-links">
+        <span class="foot-link">Sobre</span>
+        <span class="foot-link">Projetos</span>
+        <span class="foot-link">Contato</span>
+        <span class="foot-link">LinkedIn</span>
+      </div>
+      <div class="foot-copy">© 2025 Joice Soato — Todos os direitos reservados</div>
+    </div>
+
+  </div>
+</div>
