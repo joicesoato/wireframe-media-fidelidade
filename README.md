@@ -1,4 +1,4 @@
-# 💼 Portfólio UI/UX — Projeto One Page
+# 💼 Portfólio UI/UX: Projeto One Page
 
 Este projeto foi desenvolvido como atividade prática da formação em **UI/UX Designer da DIO (Digital Innovation One)**, com o objetivo de aplicar conceitos de design de interface, experiência do usuário e desenvolvimento front-end.
 
