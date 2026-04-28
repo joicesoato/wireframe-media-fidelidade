@@ -59,11 +59,11 @@ O layout foi inspirado em interfaces modernas de portfólios digitais, com foco 
 
 ## 📸 Seções do projeto
 
-* **Hero** — apresentação principal
-* **Sobre mim** — descrição profissional
-* **Habilidades** — competências técnicas
-* **Projetos** — cases desenvolvidos
-* **Contato** — formulário e redes sociais
+* **Hero**: apresentação principal
+* **Sobre mim**: descrição profissional
+* **Habilidades**: competências técnicas
+* **Projetos**: cases desenvolvidos
+* **Contato**: formulário e redes sociais
 
 ---
 
@@ -76,7 +76,7 @@ Você pode abrir o projeto localmente:
 python3 -m http.server 8000
 ```
 
-Ou simplesmente abrir o arquivo `index.html` no navegador.
+Ou simplesmente abrir o arquivo `portifolio_desktop_1440.html` no navegador.
 
 ---
 
